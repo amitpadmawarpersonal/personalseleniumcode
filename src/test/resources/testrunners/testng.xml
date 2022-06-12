@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Regression Suite" parallel="tests"
+	thread-count="3" verbose="4">
+
+	<test name="Google Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url" value="https://www.google.com" />
+		<parameter name="headless" value="true" />
+
+		<classes>
+			<class name="mytestpackage.GoogleTest" />
+		</classes>
+	</test>
+
+	<test name="Demo Open Cart Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://demo.opencart.com/index.php?route=account/login" />
+		<parameter name="headless" value="false" />
+
+
+		<classes>
+			<class name="mytestpackage.DemoOpenCartTest" />
+		</classes>
+	</test>
+
+	<test name="RP App Test">
+		<parameter name="browser" value="safari" />
+		<parameter name="url"
+			value="https://amitwebsite.residentportal.com/auth" />
+		<parameter name="headless" value="true" />
+
+		<classes>
+			<class name="mytestpackage.RPAppTest" />
+		</classes>
+	</test>
+
+
+</suite>
